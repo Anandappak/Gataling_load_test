@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: file-service
+
+  datasource:
+    url: jdbc:h2:file:./data/filedb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 50
+
+  h2:
+    console:
+      enabled: true
+
+server:
+  port: 8080
+
+app:
+  upload:
+    chunk-size-bytes: 1048576 # 1 MB
