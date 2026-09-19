@@ -12,10 +12,12 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.release>17</maven.compiler.release>
-        <scala.version>2.13.16</scala.version>
-        <gatling.version>3.15.1</gatling.version>
-        <gatling-maven-plugin.version>4.21.10</gatling-maven-plugin.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+        <scala.version>2.12.4</scala.version>
+        <gatling.version>2.3.1</gatling.version>
+        <gatling-maven-plugin.version>2.2.4</gatling-maven-plugin.version>
     </properties>
 
     <dependencies>
@@ -47,7 +49,7 @@
             <plugin>
                 <groupId>net.alchim31.maven</groupId>
                 <artifactId>scala-maven-plugin</artifactId>
-                <version>4.9.10</version>
+                <version>3.2.2</version>
 
                 <executions>
                     <execution>
@@ -67,14 +69,6 @@
                     <simulationClass>
                         simulations.FileUploadSimulation
                     </simulationClass>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>25</source>
-                    <target>25</target>
                 </configuration>
             </plugin>
 
